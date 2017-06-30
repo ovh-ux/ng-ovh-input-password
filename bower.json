@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ovh-ux/ovh-ng-input-password.git"
-  }
+  },
   "main": [
     "./dist/ovh-ng-input-password.min.js",
     "./dist/ovh-ng-input-password.css"

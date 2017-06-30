@@ -17,7 +17,7 @@ module.exports = function (grunt) {
         lessdir: "less",
         builddir: ".work/.tmp",
         name: grunt.file.readJSON("package.json").name || "ovh-ng-input-password",   // module name
-        moduleName: "inputPassword",
+        moduleName: "ovh-ng-input-password",
 
         // Clean
         clean: {
@@ -119,7 +119,7 @@ module.exports = function (grunt) {
         ngtemplates: {
             options: {
                 // This should be the name of your apps angular module
-                module: "<%= moduleName %>",
+                module: "ovh-ng-input-password",
                 htmlmin: {
                     collapseBooleanAttributes: true,
                     collapseWhitespace: true,

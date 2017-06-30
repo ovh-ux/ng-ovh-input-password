@@ -2,7 +2,7 @@
   "name": "ovh-ng-input-password",
   "author": "OVH SAS",
   "license": "BSD-3-Clause",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "An input[type='password'] with multiple check and popover displaying them",
   "repository": "ovh-ux/ovh-ng-input-password",
   "main": "./dist/ovh-ng-input-password.min.js",

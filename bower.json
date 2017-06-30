@@ -3,7 +3,7 @@
   "author": "OVH SAS",
   "license": "BSD-3-Clause",
   "description": "An input[type='password'] with multiple check and popover displaying them",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "repository": {
     "type": "git",

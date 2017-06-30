@@ -203,7 +203,7 @@ angular.module("ovh-ng-input-password").directive("ovhNgInputPassword", function
     };
 });
 
-angular.module('inputPassword').run(['$templateCache', function($templateCache) {
+angular.module('ovh-ng-input-password').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('ovh-ng-input-password.html',

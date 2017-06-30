@@ -3,7 +3,7 @@
   "author": "OVH SAS",
   "license": "BSD-3-Clause",
   "description": "An input[type='password'] with multiple check and popover displaying them",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/ovh-ux/ovh-ng-input-password.git"

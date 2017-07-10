@@ -34,6 +34,7 @@
     "grunt-karma": "^0.12.2",
     "grunt-ng-annotate": "~0.10.0",
     "grunt-ngdocs": "^0.2.5",
+    "grunt-ovh-translation": "^2.1.1",
     "grunt-wiredep": "^3.0.1",
     "jasmine-core": "^2.3.4",
     "jasmine-spec-reporter": "^2.5.0",

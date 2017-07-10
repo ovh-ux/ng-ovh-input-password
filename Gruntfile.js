@@ -33,19 +33,16 @@ module.exports = function (grunt) {
         copy: {
             // Copy concatened JS file from builddir to dist/
             dist: {
-                files: {
+                files: [{
                     "<%= distdir %>/<%= name %>.js": "<%= builddir %>/<%= name %>.js"
-                }
-            },
-            translations: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: "<%= srcdir %>",
-                        dest: "<%= distdir %>",
-                        src: ["translations/*.xml"]
-                    }
-                ]
+                }, {
+                    expand: true,
+                    cwd: "<%= srcdir %>",
+                    dest: "<%= distdir %>",
+                    src: [
+                        "**/translations/*.json"
+                    ]
+                }]
             }
         },
 
@@ -175,6 +172,18 @@ module.exports = function (grunt) {
             }
         },
 
+        // translation
+        ovhTranslation: {
+            dev: {
+                files: [{
+                    expand: true,
+                    src: ["<%= srcdir %>/**/translations/*.xml"],
+                    filter: "isFile",
+                    extendFrom: ["en_GB", "fr_FR"]
+                }]
+            }
+        },
+
         // To release
         bump: {
             options: {
@@ -228,6 +237,8 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask("buildProd", [
+        "clean",
+        "ovhTranslation",
         "eslint",
         "complexity",
         "ngtemplates",

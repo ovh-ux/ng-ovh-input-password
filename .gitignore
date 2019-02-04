@@ -1,5 +1,3 @@
-node_modules/
-bower_components/
-.work
-.tmp
-src/translations/*.json
+node_modules
+dist
+tools

@@ -1,0 +1,243 @@
+@oui-path: "../../../ovh-ui-kit";
+
+@import "~ovh-ui-kit-bs/src/bootstrap/_variables";
+
+@input-password-popover-bg-color: #f3f3f3;
+@input-password-border-color:#bbbdbf;
+@input-password-valid-color: #1590af;
+@input-password-valid-bg-color: rgba(89, 210, 239, 0.15);
+@input-password-check-color: #b0ca67;
+@input-password-success-color: #b0ca67;
+@input-password-warning-color: #e3cd4d;
+@input-password-danger-color: #b04020;
+@input-password-success-bg-color: #e0eac2;
+@input-password-warning-bg-color: #faefa0;
+@input-password-danger-bg-color: #f5e0da;
+@input-password-status-size: 20px;
+@input-password-bold: 600;
+@input-password-height: 45px;
+
+/* stylelint-disable-next-line selector-type-no-unknown */
+ovh-ng-input-password {
+  div.input-password {
+    height: @input-password-height;
+    position: relative;
+
+    button.input-password {
+      position: absolute;
+      right: 8px;
+      top: 7px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      color: @input-password-border-color;
+      z-index: 10;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+
+      svg.vision {
+        width: 21px;
+        height: 15px;
+        fill: @input-password-border-color;
+
+        &.eye {
+          .input-password-see {
+            display: initial;
+          }
+
+          .input-password-hide {
+            display: none;
+          }
+        }
+
+        &.eye-slash {
+          .input-password-see {
+            display: none;
+          }
+
+          .input-password-hide {
+            display: initial;
+          }
+        }
+      }
+    }
+
+    input.input-password {
+      padding-right: 35px;
+      border-radius: 4px;
+      border-color: @input-password-border-color;
+    }
+
+    &.ng-valid {
+      button.input-password {
+        svg.vision {
+          fill: @input-password-valid-color;
+        }
+      }
+
+      input.input-password {
+        border-color: @input-password-valid-color;
+        background-color: @input-password-valid-bg-color;
+      }
+    }
+
+    &.ng-invalid {
+      button.input-password {
+        svg.vision {
+          fill: @input-password-danger-color;
+        }
+      }
+
+      input.input-password {
+        border-color: @input-password-danger-color;
+        background-color: @input-password-danger-bg-color;
+      }
+    }
+  }
+
+  div.input-password-small-device {
+    @media (min-width: @screen-sm-max) {
+      display: none;
+    }
+
+    .arrow_box {
+      position: relative;
+      background: @input-password-popover-bg-color;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+
+      &::after,
+      &::before {
+        bottom: 100%;
+        left: 25px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      &::after {
+        border-bottom-color: @input-password-popover-bg-color;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+
+      &::before {
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        border-width: 13px;
+        margin-left: -13px;
+      }
+    }
+  }
+}
+
+div[uib-popover-template-popup].popover.input-password-popover {
+  border-width: 2px;
+  border-radius: 8px;
+  background-color: @input-password-popover-bg-color;
+
+  @media (max-width: @screen-md-min) {
+    display: none !important;
+  }
+
+  &.right > div.arrow::after {
+    border-right-color: @input-password-popover-bg-color;
+    left: 2px;
+  }
+}
+
+div.input-password-validation {
+  display: inline-block;
+  width: 350px;
+  padding: 8px;
+  min-height: 35px;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      padding: 6px 0 6px 6px;
+
+      i {
+        font-size: @input-password-status-size;
+
+        &.ovh-font-filled-check {
+          color: @input-password-check-color;
+        }
+
+        &.ovh-font-filled-error {
+          color: @input-password-danger-color;
+        }
+      }
+
+      span.circle {
+        display: inline-block;
+        border: solid 1px @input-password-border-color;
+        height: @input-password-status-size;
+        width: @input-password-status-size;
+        border-radius: @input-password-status-size/2;
+        vertical-align: middle;
+      }
+
+      .circle {
+        margin-right: 6px;
+      }
+
+      span.caption {
+        margin-left: 0;
+
+        &.met {
+          font-weight: @input-password-bold;
+        }
+
+        &.unmet {
+          font-weight: @input-password-bold;
+          color: @input-password-danger-color;
+        }
+      }
+    }
+  }
+
+  span.input-password-label {
+    font-size: 0.8em;
+  }
+
+  span.strength {
+    font-weight: @input-password-bold;
+
+    &.danger {
+      color: @input-password-danger-color;
+    }
+
+    &.warning {
+      color: @input-password-warning-color;
+    }
+
+    &.success {
+      color: @input-password-valid-color;
+    }
+  }
+
+  div.progress-bar {
+    &.progress-bar-danger {
+      border-color: @input-password-danger-color;
+      background-color: @input-password-danger-bg-color;
+    }
+
+    &.progress-bar-warning {
+      border-color: @input-password-warning-color;
+      background-color: @input-password-warning-bg-color;
+    }
+
+    &.progress-bar-success {
+      border-color: @input-password-success-color;
+      background-color: @input-password-success-bg-color;
+    }
+  }
+}

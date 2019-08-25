@@ -41,7 +41,7 @@ export default class {
 
     if (!this.valid) {
       this.passwordStrength = {
-        value: 100 * this.metRules / this.rules.length,
+        value: (100 * this.metRules) / this.rules.length,
         type: 'danger',
       };
 

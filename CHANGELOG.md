@@ -1,3 +1,7 @@
+## [2.0.2](https://github.com/ovh-ux/ng-ovh-input-password/compare/v2.0.1...v2.0.2) (2019-11-07)
+
+
+
 ## [2.0.1](https://github.com/ovh-ux/ng-ovh-input-password/compare/v2.0.0...v2.0.1) (2019-08-30)
 
 

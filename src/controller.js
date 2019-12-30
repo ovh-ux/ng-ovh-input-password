@@ -46,7 +46,7 @@ export default class {
       };
 
       if (this.hasStrength) {
-        this.passwordStrength.value = this.passwordStrength.value / 3;
+        this.passwordStrength.value /= 3;
       }
     } else if (this.hasStrength) {
       const passwordStrengthValue = (100 * (this.strength({ value: this.typedPassword || '' }) / 1.5)) + (100 / 3);

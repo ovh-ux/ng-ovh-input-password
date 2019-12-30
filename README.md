@@ -7,7 +7,7 @@
 ## Install
 
 ```sh
-yarn add @ovh-ux/ng-ovh-input-password
+$ yarn add @ovh-ux/ng-ovh-input-password
 ```
 
 ## Usage
@@ -16,21 +16,18 @@ yarn add @ovh-ux/ng-ovh-input-password
 import angular from 'angular';
 import ngOvhInputPassword from '@ovh-ux/ng-ovh-input-password';
 
-angular
-  .module('myApp', [
-    ngOvhInputPassword,
-  ]);
+angular.module('myApp', [ngOvhInputPassword]);
 ```
 
 ## Test
 
 ```sh
-yarn test
+$ yarn test
 ```
 
 ## Contributing
 
-Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ng-ovh-simple-country-list/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ng-ovh-simple-country-list/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
+Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ng-ovh-input-password/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ng-ovh-input-password/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
 
 ## License
 
